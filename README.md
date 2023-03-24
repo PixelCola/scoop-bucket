@@ -1,23 +1,31 @@
-# Scoop Bucket Template
+# Scoop
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+## Install scoop
+*For Admin*
+```powershell
+irm get.scoop.sh -outfile 'install.ps1'
+.\install.ps1 -RunAsAdmin [-OtherParameters ...]
+# I don't care about other parameters and want a one-line command
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+```
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+## Add this bucket
+```powershell
+scoop bucket add apps https://github.com/sncwt/scoop-bucket
+```
 
-How do I install these manifests?
----------------------------------
+## Basic usage
+*Wiki*
+- [Scoop Wiki](https://github.com/ScoopInstaller/Scoop/wiki)
 
-To add this bucket, run `scoop bucket add <bucketname> https://github.com/<username>/<bucketname>`. To install, do `scoop install <manifest>`.
+*How to create bucket*
+- https://www.simaek.com/archives/88/
+- https://zhuanlan.zhihu.com/p/413985471
 
-How do I contribute new manifests?
-----------------------------------
-
-To make a new manifest contribution, please read the [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md).
-
-----
-
-#### To use this template
-
-- Modify the Readme.md and the bin/auto-pr.ps1 files accordingly.
-- Enable GitHub Actions for this repository.
+## Apps
+*Reference*
+- [Main](https://github.com/ScoopInstaller/Main)
+- [Extras](https://github.com/ScoopInstaller/Extras)
+- [Nonportable](https://github.com/ScoopInstaller/Nonportable)
+- [dorado](https://github.com/chawyehsu/dorado)
+- [scoop-apps](https://github.com/kkzzhizhou/scoop-apps)
