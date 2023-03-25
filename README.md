@@ -1,18 +1,27 @@
 # Scoop
 
 ## Install scoop
-*For Admin*
 ```powershell
-irm get.scoop.sh -outfile 'install.ps1'
-.\install.ps1 -RunAsAdmin [-OtherParameters ...]
-# I don't care about other parameters and want a one-line command
-iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+irm get.scoop.sh | iex
 ```
 
-## Add this bucket
+## Add bucket
 ```powershell
 scoop bucket add apps https://github.com/sncwt/scoop-bucket
+
+scoop bucket add dorado https://github.com/chawyehsu/dorado
 ```
+
+## Search apps
+[scoop.sh](https://scoop.sh/#/apps?s=0&d=1&o=true)
+
+## Install apps
+```powershell
+scoop insal <bucket>/<app_name>
+```
+
 
 ## Basic usage
 *Wiki*
@@ -21,11 +30,3 @@ scoop bucket add apps https://github.com/sncwt/scoop-bucket
 *How to create bucket*
 - https://www.simaek.com/archives/88/
 - https://zhuanlan.zhihu.com/p/413985471
-
-## Apps
-*Reference*
-- [Main](https://github.com/ScoopInstaller/Main)
-- [Extras](https://github.com/ScoopInstaller/Extras)
-- [Nonportable](https://github.com/ScoopInstaller/Nonportable)
-- [dorado](https://github.com/chawyehsu/dorado)
-- [scoop-apps](https://github.com/kkzzhizhou/scoop-apps)
