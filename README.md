@@ -2,9 +2,17 @@
 
 ## Install scoop
 ```powershell
+# Typical Installation
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
 irm get.scoop.sh | iex
+
+# Advanced Installation
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh -outfile 'install.ps1'
+# To see all configurable parameters of the installer.
+.\install.ps1 -?
+# For example
+.\install.ps1 -ScoopDir 'D:\Applications\Scoop' -ScoopGlobalDir 'F:\GlobalScoopApps' -NoProxy
 ```
 
 ## Add bucket
