@@ -29,6 +29,7 @@ scoop insal <bucket>/<app_name>
 ```
 
 ## 此仓库部分应用引用列表
+> 非官方认证的 bucket
 1. [clash-verge](https://github.com/chawyehsu/dorado/blob/811aed9e00a2ec0ba6e49b09d7a36c2a37eb935d/bucket/clash-verge.json)
 
 
