@@ -13,6 +13,8 @@ irm get.scoop.sh -outfile 'install.ps1'
 .\install.ps1 -?
 # 例子：自定义安装目录
 .\install.ps1 -ScoopDir 'D:\Applications\Scoop' -ScoopGlobalDir 'F:\GlobalScoopApps' -NoProxy
+# 管理员安装
+.\install.ps1 -RunAsAdmin [-OtherParameters ...]
 ```
 
 ## 添加 bucket
@@ -25,7 +27,7 @@ scoop bucket add apps https://github.com/sncwt/scoop-bucket
 
 ## 安装应用
 ```powershell
-scoop insal <bucket>/<app_name>
+scoop install <bucket>/<app_name>
 ```
 
 ## 此仓库部分应用引用列表
