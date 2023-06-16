@@ -8,6 +8,7 @@
     },
     "url": "https://cdn.ipip.net/17mon/besttrace.exe#/dl.7z",
     "hash": "CB39381BFE14AAFEDB481B76DB863EAF421E5B155DF175480FE5F0ADABA58A80",
+    "innosetup": true,
     "shortcuts": [
         [
             "17monipdb.exe",
